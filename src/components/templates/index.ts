@@ -1,1 +1,1 @@
-// I am for layouts
+export * from "./app-layout";

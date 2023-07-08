@@ -1,9 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
+import { MainRoute } from "./routing";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-red-500 underline">
-        Hello world!
-      </h1>
+      {/* <Toaster position="top-center" /> */}
+      <BrowserRouter>
+        <MainRoute />
+      </BrowserRouter>
     </>
   );
 }
