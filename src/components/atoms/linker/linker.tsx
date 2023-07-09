@@ -18,7 +18,7 @@ export const Linker = () => {
   };
 
   const data = {
-    name: "Jane",
+    name: "Jane Doe",
   };
 
   const DropdownMenu = () => (
