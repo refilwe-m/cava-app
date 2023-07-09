@@ -1,4 +1,4 @@
-import { FAQ, TextField, Trends, Status } from "../..";
+import { FAQ, TextField, Trends } from "../..";
 
 export const User = () => {
   const data = {

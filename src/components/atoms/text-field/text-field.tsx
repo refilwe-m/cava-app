@@ -1,11 +1,12 @@
 import { Field, Form, Formik, FormikProps } from "formik";
 import { Status } from "../";
+import Hashtags from "../hashtags/hashtags";
 
 export const TextField = () => {
   return (
-    <section>
+    <section className="w-full">
       <Formik
-        initialValues={{ tags: [], question: "" }}
+        initialValues={{ tags: [], question: "", by: "" }}
         onSubmit={(values, actions) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -14,12 +15,13 @@ export const TextField = () => {
         }}
       >
         {(props: FormikProps<any>) => (
-          <Form className="grid gap-2 w-full">
+          <Form className="flex flex-col gap-2 w-full">
             <Field
-              className="drop-shadow-lg rounded-2xl h-24 px-2"
+              className="drop-shadow-lg border rounded-2xl grow w-full h-24 px-2"
               name="question"
               placeholder="Ask your question"
             />
+            <Hashtags />
             <div className="flex justify-between">
               <Status status="private" />
               <button

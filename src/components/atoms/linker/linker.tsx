@@ -2,6 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
 import { Fragment } from "react";
+import { Logo } from "../../../assets";
 export const Linker = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -44,8 +45,9 @@ export const Linker = () => {
                 {({ active }) => (
                   <button
                     type="button"
-                    className={`${active ? "bg-secondary text-white" : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    className={`${
+                      active ? "bg-secondary text-white" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     onClick={signOut}
                   >
                     Sign Out
@@ -64,7 +66,7 @@ export const Linker = () => {
       <NavLink className="flex flex-col-reverse justify-center" to="/">
         {({ isActive }) => (
           <div>
-            <span className="pb-2 font-extrabold text-[#ffff]">CAVA</span>
+            <img src={Logo} width={60} />
             <div className={(isActive && "is-active") || ""} />
           </div>
         )}
