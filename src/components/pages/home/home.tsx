@@ -10,7 +10,7 @@ export const Home = () => {
         <div className="text-center pt-10">
           <NavLink
             className="bg-primary hover:bg-secondary text-lg text-white font-bold rounded-xl px-14 py-3 "
-            to="/register"
+            to="/user"
           >
             Get Started
           </NavLink>
