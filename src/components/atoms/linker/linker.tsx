@@ -72,7 +72,7 @@ export const Linker = () => {
       </NavLink>
       {!isRoot() ? (
         <div className="flex">
-          <NavLink className="flex flex-col-reverse justify-center" to="/">
+          <NavLink className="flex flex-col-reverse justify-center" to="/blogs">
             {({ isActive }) => (
               <div>
                 <span className="pb-2">Blogs</span>

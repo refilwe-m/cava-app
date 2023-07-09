@@ -6,6 +6,9 @@ export default {
         primary: "#361B45",
         secondary: "#7E5A93",
       },
+      backgroundImage: () => ({
+        "app-background": "url('assets/images/app-background.png')",
+      }),
     },
   },
   plugins: [],

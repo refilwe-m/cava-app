@@ -6,8 +6,10 @@ import { Outlet } from "react-router-dom";
 export const AppLayout: FC<OptionalChildProp> = ({ children }) => {
   return (
     <>
-      <Linker />
-      <Nav>{children || <Outlet />}</Nav>
+      <div className="">
+        <Linker />
+        <Nav>{children || <Outlet />}</Nav>
+      </div>
     </>
   );
 };

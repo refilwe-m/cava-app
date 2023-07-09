@@ -3,7 +3,7 @@ import { DoctorPatient } from "../../../assets";
 
 export const Home = () => {
   return (
-    <main className="flex items-center justify-center">
+    <main className="flex items-center bg-white rounded-2xl justify-center">
       <section className="text-primary">
         <h1 className="font-extrabold text-8xl">Cava Health</h1>
         <h3 className="text-center text-2xl">Your plug to health care</h3>

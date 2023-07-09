@@ -1,4 +1,4 @@
-import { AppLayout, User, Home } from "../components";
+import { AppLayout, User, Home, Blogs } from "../components";
 
 export const AppRouter = [
   {
@@ -12,6 +12,10 @@ export const AppRouter = [
       {
         path: "/user",
         element: <User />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
       },
     ],
   },

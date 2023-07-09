@@ -24,21 +24,16 @@ export const User = () => {
   };
 
   return (
-    <main className="grid grid-cols-3 gap-6 w-full">
-      <section className="col-span-2">
-        <section className="flex gap-2">
-          <section className="">
-            <img
-              className="rounded-full"
-              src="https://picsum.photos/90"
-              alt=""
-            />
-          </section>
-          <TextField />
+    <main className="grid gap-6 w-full">
+      <section className="flex gap-2">
+        <section className="">
+          <img className="rounded-full" src="https://picsum.photos/90" alt="" />
         </section>
+        <TextField />
       </section>
-      <section className="">
+      <section className="grid grid-cols-3">
         <Trends trends={data?.trends} />
+        <section className="col-span-2"></section>
       </section>
     </main>
   );
