@@ -25,7 +25,7 @@ export const Linker = () => {
     <div className="flex min-h-[64px] items-center justify-end px-3">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex hover:text-[#e7e170] w-full justify-center rounded-md px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             {data?.name ?? "Placeholder"}
             <BsChevronDown className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
           </Menu.Button>
@@ -63,7 +63,10 @@ export const Linker = () => {
 
   return (
     <header className="bg-primary text-white w-full h-16 flex items-center justify-between px-4">
-      <NavLink className="flex flex-col-reverse justify-center" to="/">
+      <NavLink
+        className="flex flex-col-reverse hover:text-[#e7e170] justify-center"
+        to="/"
+      >
         {({ isActive }) => (
           <div>
             <img src={Logo} width={60} />
@@ -73,7 +76,10 @@ export const Linker = () => {
       </NavLink>
       {!isRoot() ? (
         <div className="flex">
-          <NavLink className="flex flex-col-reverse justify-center" to="/blogs">
+          <NavLink
+            className="flex flex-col-reverse hover:text-[#e7e170] justify-center"
+            to="/blogs"
+          >
             {({ isActive }) => (
               <div>
                 <span className="pb-2">Blogs</span>
@@ -84,7 +90,10 @@ export const Linker = () => {
           <DropdownMenu />
         </div>
       ) : (
-        <NavLink className="flex flex-col-reverse justify-center" to="/login">
+        <NavLink
+          className="flex flex-col-reverse hover:text-[#e7e170] justify-center"
+          to="/login"
+        >
           {({ isActive }) => (
             <div>
               <span className="pb-2">Login</span>
