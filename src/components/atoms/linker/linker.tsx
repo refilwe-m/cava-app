@@ -44,9 +44,8 @@ export const Linker = () => {
                 {({ active }) => (
                   <button
                     type="button"
-                    className={`${
-                      active ? "bg-secondary text-white" : "text-gray-900"
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    className={`${active ? "bg-secondary text-white" : "text-gray-900"
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     onClick={signOut}
                   >
                     Sign Out
@@ -65,7 +64,7 @@ export const Linker = () => {
       <NavLink className="flex flex-col-reverse justify-center" to="/">
         {({ isActive }) => (
           <div>
-            <span className="pb-2 font-extrabold text-[#f7ee54]">CAVA</span>
+            <span className="pb-2 font-extrabold text-[#ffff]">CAVA</span>
             <div className={(isActive && "is-active") || ""} />
           </div>
         )}

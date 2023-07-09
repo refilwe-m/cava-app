@@ -2,33 +2,33 @@ export const Blogs = () => {
   const posts = [
     {
       id: 1,
-      title: "Normalize talking about menstruation with your male boss",
+      title: "Normalizing Conversations About Menstruation with Your Male Boss",
       href: "#",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        "Menstruation is a natural and normal biological process experienced by many people who identify as women. However, discussing menstruation openly and comfortably in professional settings, especially with male superiors, can still feel challenging for many individuals.",
       date: "Mar 16, 2020",
       datetime: "2020-03-16",
-      category: { title: "Fertility", href: "#" },
+      category: { title: "Menstruation", href: "#" },
       author: {
         name: "Zandile Nhlavu",
         role: "Co-Founder / CTO",
         href: "#",
         imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          "https://plus.unsplash.com/premium_photo-1675034393497-86e6970d2f49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
       },
     },
     {
       id: 1,
-      title: "Boost your conversion rate",
+      title: "Navigating Parenthood as a Teen: Support for Single Parents",
       href: "#",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        "Becoming a parent as a teenager can be challenging, but it's important to remember that you're not alone. Many single parents who are teens successfully navigate the journey of parenthood and find support along the way. In this blog post, we will explore some strategies and resources to help single teenage parents thrive and provide the best care for their child.",
       date: "Mar 16, 2020",
       datetime: "2020-03-16",
       category: { title: "Menstruation", href: "#" },
       author: {
         name: "Shaylen Majombo",
-        role: "Co-Founder / CTO",
+        role: "General Practitioner (GP) or Family Physician",
         href: "#",
         imageUrl:
           "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
@@ -36,10 +36,10 @@ export const Blogs = () => {
     },
     {
       id: 1,
-      title: "How to have conversations with your parents about Sex",
+      title: "How to have conversations with your children about Sex",
       href: "#",
       description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+        "Having 'The Birds and the Bees' talk with your child can feel daunting, but it is an important conversation to help them understand the basics of human reproduction, relationships, and sexual health. As a parent, providing accurate information and guidance can support your child's development and decision-making. In this blog post, we will explore some strategies to help you navigate this conversation effectively and create a safe space for discussing these important topics.",
       date: "Mar 16, 2020",
       datetime: "2020-03-16",
       category: { title: "Coitus Talks", href: "#" },
@@ -48,7 +48,7 @@ export const Blogs = () => {
         role: "Doctor",
         href: "#",
         imageUrl:
-          "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
       },
     },
     // More posts...
@@ -61,8 +61,7 @@ export const Blogs = () => {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             From the blog
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
+          <p className="mt-2 text-lg leading-8 text-gray-600">Your Trusted Source for Medical Insights.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
