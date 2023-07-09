@@ -1,10 +1,65 @@
-import { NavLink, useLocation } from "react-router-dom";
-
+import { Menu, Transition } from "@headlessui/react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { BsChevronDown } from "react-icons/bs";
+import { Fragment } from "react";
 export const Linker = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const signOut = () => {
+    return navigate("/");
+    /* userAuthService.logout().then(() => {
+      navigate("/");
+    }); */
+  };
   const isRoot = () => {
     return location.pathname == "/";
   };
+
+  const data = {
+    name: "Jane",
+  };
+
+  const DropdownMenu = () => (
+    <div className="flex min-h-[64px] items-center justify-end px-3">
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+            {data?.name ?? "Placeholder"}
+            <BsChevronDown className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute z-10  right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="px-1 py-1">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    type="button"
+                    className={`${
+                      active ? "bg-secondary text-white" : "text-gray-900"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    onClick={signOut}
+                  >
+                    Sign Out
+                  </button>
+                )}
+              </Menu.Item>
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </div>
+  );
+
   return (
     <header className="bg-primary hover:text-[#e7e170] text-white w-full h-16 flex items-center justify-between px-4">
       <NavLink className="flex flex-col-reverse justify-center" to="/">
@@ -15,7 +70,19 @@ export const Linker = () => {
           </div>
         )}
       </NavLink>
-      {isRoot() && (
+      {!isRoot() ? (
+        <div className="flex">
+          <NavLink className="flex flex-col-reverse justify-center" to="/">
+            {({ isActive }) => (
+              <div>
+                <span className="pb-2">Blogs</span>
+                <div className={(isActive && "is-active") || ""} />
+              </div>
+            )}
+          </NavLink>
+          <DropdownMenu />
+        </div>
+      ) : (
         <NavLink className="flex flex-col-reverse justify-center" to="/login">
           {({ isActive }) => (
             <div>

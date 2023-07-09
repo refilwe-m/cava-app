@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { DoctorPatient } from "../../assets";
+import { DoctorPatient } from "../../../assets";
 
 export const Home = () => {
   return (
@@ -19,7 +19,7 @@ export const Home = () => {
       <section>
         <img
           src={DoctorPatient}
-          width={"85%"}
+          height={"100%"}
           alt="doctor and patient illustration"
         />
       </section>
