@@ -62,7 +62,7 @@ export const Linker = () => {
   );
 
   return (
-    <header className="bg-primary hover:text-[#e7e170] text-white w-full h-16 flex items-center justify-between px-4">
+    <header className="bg-primary text-white w-full h-16 flex items-center justify-between px-4">
       <NavLink className="flex flex-col-reverse justify-center" to="/">
         {({ isActive }) => (
           <div>
