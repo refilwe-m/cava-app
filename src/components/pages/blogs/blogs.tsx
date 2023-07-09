@@ -2,7 +2,7 @@ export const Blogs = () => {
   const posts = [
     {
       id: 1,
-      title: "Boost your conversion rate",
+      title: "Normalize talking about menstruation with your male boss",
       href: "#",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
@@ -10,7 +10,7 @@ export const Blogs = () => {
       datetime: "2020-03-16",
       category: { title: "Fertility", href: "#" },
       author: {
-        name: "Michael Foster",
+        name: "Zandile Nhlavu",
         role: "Co-Founder / CTO",
         href: "#",
         imageUrl:
@@ -27,7 +27,7 @@ export const Blogs = () => {
       datetime: "2020-03-16",
       category: { title: "Menstruation", href: "#" },
       author: {
-        name: "Michael Foster",
+        name: "Shaylen Majombo",
         role: "Co-Founder / CTO",
         href: "#",
         imageUrl:
@@ -103,7 +103,7 @@ export const Blogs = () => {
                   <p className="font-semibold text-gray-900">
                     <a href={post.author.href}>
                       <span className="absolute inset-0" />
-                      {post.author.name}
+                      Dr. {post.author.name}
                     </a>
                   </p>
                   <p className="text-gray-600">{post.author.role}</p>
