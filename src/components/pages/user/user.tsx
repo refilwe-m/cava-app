@@ -1,5 +1,4 @@
-import { TextField, Trends } from "../..";
-import { Status } from "../../atoms/status/status";
+import { FAQ, TextField, Trends, Status } from "../..";
 
 export const User = () => {
   const data = {
@@ -24,16 +23,18 @@ export const User = () => {
   };
 
   return (
-    <main className="grid gap-6 w-full">
+    <main className="flex flex-col w-full bg-white rounded-xl drop-shadow-2xl h-fill p-8">
       <section className="flex gap-2">
         <section className="">
           <img className="rounded-full" src="https://picsum.photos/90" alt="" />
         </section>
         <TextField />
       </section>
-      <section className="grid grid-cols-3">
+      <section className="grid grid-cols-3 gap-4 py-4">
         <Trends trends={data?.trends} />
-        <section className="col-span-2"></section>
+        <section className="col-span-2">
+          <FAQ />
+        </section>
       </section>
     </main>
   );
