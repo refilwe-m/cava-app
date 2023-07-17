@@ -1,9 +1,9 @@
 import axios from "axios";
-export const baseURL = "https://gnvynmgmkswaourfeaxn.supabase.co";
 
-export const openAPI = axios.create({
-  baseURL: baseURL,
-});
+export const axiosCall = (baseURL: string) =>
+  axios.create({
+    baseURL: baseURL,
+  });
 
 /* export const closedAPI = axios.create({
   baseURL: baseURL,
