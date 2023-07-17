@@ -3,13 +3,13 @@ import { DoctorPatient } from "../../../assets";
 
 export const Home = () => {
   return (
-    <main className="flex items-center bg-white rounded-2xl justify-center">
+    <main className="flex items-center bg-white rounded-2xl justify-center h-max p-4">
       <section className="text-primary">
         <h1 className="font-extrabold text-6xl">Cava Health</h1>
         <h3 className="text-center text-2xl">Your plug to health care</h3>
-        <div className="text-center pt-10">
+        <div className="text-center lg:pt-10">
           <NavLink
-            className="bg-primary hover:bg-secondary text-lg text-white font-bold rounded-xl px-14 py-3 "
+            className="bg-primary hover:bg-secondary text-xs lg:text-lg text-white font-bold rounded-xl px-2 lg:px-14 py-3 "
             to="/user"
           >
             Get Started
