@@ -4,7 +4,6 @@ import Hashtags from "../hashtags/hashtags";
 import { toast } from "react-hot-toast";
 
 export const TextField = () => {
-  //Clear Form Fields after submit
   const clearFormFields = () => {
     const form = document.querySelector("form");
     if (form) {
@@ -25,8 +24,6 @@ export const TextField = () => {
           setTimeout(() => {
             toast.success("Question asked successfully");
             clearFormFields();
-            /*  alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false); */
           }, 1000);
         }}
       >
