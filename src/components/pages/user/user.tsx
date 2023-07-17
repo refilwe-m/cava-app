@@ -1,4 +1,4 @@
-import { FAQ, TextField, Trends } from "../..";
+import { FAQ, EnquiryForm, Trends } from "../..";
 
 export const User = () => {
   const data = {
@@ -13,11 +13,15 @@ export const User = () => {
       },
       {
         trend: "#Menstruation",
-        numEnquirers: 3546,
+        numEnquirers: 6908,
       },
       {
         trend: "#Hormones",
-        numEnquirers: 3546,
+        numEnquirers: 96,
+      },
+      {
+        trend: "#WomensHealth",
+        numEnquirers: 1105,
       },
     ],
   };
@@ -28,11 +32,11 @@ export const User = () => {
         <section className="">
           <img className="rounded-full" src="https://picsum.photos/90" alt="" />
         </section>
-        <TextField />
+        <EnquiryForm />
       </section>
-      <section className="grid grid-cols-3 gap-4 py-4">
+      <section className="flex flex-col lg:grid lg:grid-cols-3 gap-4 py-4">
         <Trends trends={data?.trends} />
-        <section className="col-span-2">
+        <section className="lg:col-span-2">
           <FAQ />
         </section>
       </section>

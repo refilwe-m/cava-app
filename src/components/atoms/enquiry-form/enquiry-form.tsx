@@ -1,9 +1,9 @@
 import { Field, Form, Formik, FormikProps } from "formik";
-import { Status } from "../";
+import { Status } from "..";
 import Hashtags from "../hashtags/hashtags";
 import { toast } from "react-hot-toast";
 
-export const TextField = () => {
+export const EnquiryForm = () => {
   const clearFormFields = () => {
     const form = document.querySelector("form");
     if (form) {
