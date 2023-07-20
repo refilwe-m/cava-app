@@ -49,14 +49,16 @@ export const EnquiryForm = () => {
       () => console.log("Success"),
       () => console.log("Failed")
     );
+    clearFormFields();
   };
 
   return (
     <section className="w-full">
       <Formik
         initialValues={initialValues}
-        onSubmit={(values) => {
+        onSubmit={(values, { resetForm }) => {
           onAsk(values);
+          resetForm({ values: initialValues });
         }}
       >
         {(props: FormikProps<EnquiryProps>) => (
