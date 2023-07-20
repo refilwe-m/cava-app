@@ -57,7 +57,11 @@ export const EnquiryForm = () => {
       <Formik
         initialValues={initialValues}
         onSubmit={(values, { resetForm }) => {
-          onAsk(values);
+          const submission = {
+            ...values,
+            tag: selectedHashTag?.name || "#Menstruation",
+          };
+          onAsk(submission);
           resetForm({ values: initialValues });
         }}
       >
