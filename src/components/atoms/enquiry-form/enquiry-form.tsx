@@ -71,6 +71,7 @@ export const EnquiryForm = () => {
             <Field
               name="tag"
               as="select"
+              value={selectedHashTag}
               selectedHashTag={selectedHashTag}
               setSelectedHashTag={setSelectedHashTag}
               onChange={setSelectedHashTag}
