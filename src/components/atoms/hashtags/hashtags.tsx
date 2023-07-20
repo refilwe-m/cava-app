@@ -1,4 +1,4 @@
-import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { Fragment, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { BsChevronDown } from "react-icons/bs";
 import { BsCheck } from "react-icons/bs";
@@ -10,13 +10,18 @@ const hashtags = [
   { id: 4, name: "#Hormones" },
   { id: 5, name: "#FemaleHealth" },
 ];
-type HashTag = {
+export type HashTag = {
   id: number;
   name: string;
 };
 
-export default function HashTag() {
-  const [selected, setSelected] = useState(hashtags[0]);
+export default function HashTag({
+  setSelectedHashTag,
+  selectedHashTag,
+}: {
+  selectedHashTag: HashTag;
+  setSelectedHashTag: (hashtag: HashTag) => void;
+}) {
   const [query, setQuery] = useState("");
 
   const filteredHashtags =
@@ -31,12 +36,13 @@ export default function HashTag() {
 
   return (
     <div className="w-full border rounded-xl">
-      <Combobox value={selected} onChange={setSelected}>
+      <Combobox value={selectedHashTag} onChange={setSelectedHashTag}>
         <div className="relative mt-1">
           <div className="relative w-full cursor-default ring-0 focus:ring-0 overflow-hidden rounded-lg  text-left shadow-md sm:text-sm">
             <Combobox.Input
+              placeholder="Select a hashtag"
               className="w-full border-none py-2 pl-3 pr-10 text-sm text-gray-900 ring-0 focus:ring-0"
-              displayValue={(hashtag: HashTag) => hashtag.name}
+              displayValue={(hashtag: HashTag) => hashtag?.name}
               onChange={(event) => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 ring-0 focus:ring-0 flex items-center pr-2">
